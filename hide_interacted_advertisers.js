@@ -74,16 +74,19 @@ async function loadMoreInteractedAdvertisers(){
 async function hideInteractedAdvertisers(){
   var advertisersInteracted = document.getElementById('interacted');
   var buttons = advertisersInteracted.getElementsByTagName('button');
+  var removedCounter = 0;
   for (var i = 0; i < buttons.length; i++) { 
     var content = buttons[i].getAttribute("data-tooltip-content"); 
     if ( content == "Remove" ) { 
       buttons[i].click();
+      removedCounter++;
       await sleep(200);  // wait .2 seconds to finish hiding current advertiser
     }
   }
+  return removedCounter;
 }
 
 
 openInteractedAdvertisersSection();
 loadMoreInteractedAdvertisers();
-hideInteractedAdvertisers();
+hideInteractedAdvertisers().then(val => alert("Removed " + val + " advertisers"));
