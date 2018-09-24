@@ -3,8 +3,6 @@
 
   Instructions:
     Go to https://www.facebook.com/ads/preferences/
-    Click "Advertisers you've interacted with"
-    Click "load more" as many times as you can (or are willing)
     Open your browser's Javascript console for that tab/window
     Copy all this code
     Paste this code into the Javascript console command line
@@ -50,6 +48,29 @@ function sleep(ms) {
 }
 
 
+async function openInteractedAdvertisersSection(){
+  var advertisersInteracted = document.getElementById('interacted');
+  var advertisersExpandables = advertisersInteracted.querySelectorAll('[data-testid="ads_settings_expandable_profile"]');
+  if(advertisersExpandables.length == 1){
+    // Assumes section is currently hidden
+    // Todo: check if section is already visible
+    advertisersExpandables[0].click();
+    await sleep(500);
+  }
+}
+
+
+async function loadMoreInteractedAdvertisers(){
+  var advertisersInteracted = document.getElementById('interacted');
+  var moreLinks = advertisersInteracted.querySelectorAll('[shade="medium"]');
+  if(moreLinks.length > 0){
+    moreLinks[0].click();
+    await sleep(2000);  // wait 2 seconds for new advertisers to finish loading
+    loadMoreInteractedAdvertisers();
+  }
+}
+
+
 async function hideInteractedAdvertisers(){
   var advertisersInteracted = document.getElementById('interacted');
   var buttons = advertisersInteracted.getElementsByTagName('button');
@@ -62,4 +83,7 @@ async function hideInteractedAdvertisers(){
   }
 }
 
+
+openInteractedAdvertisersSection();
+loadMoreInteractedAdvertisers();
 hideInteractedAdvertisers();
