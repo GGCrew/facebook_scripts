@@ -89,4 +89,4 @@ async function hideInteractedAdvertisers(){
 
 openInteractedAdvertisersSection();
 loadMoreInteractedAdvertisers();
-hideInteractedAdvertisers().then(val => alert("Removed " + val + " advertisers"));
+hideInteractedAdvertisers().then(val => alert("Script complete!\nRemoved " + val + " advertisers"));
