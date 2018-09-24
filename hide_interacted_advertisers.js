@@ -63,7 +63,7 @@ async function openInteractedAdvertisersSection(){
 async function loadMoreInteractedAdvertisers(){
   var advertisersInteracted = document.getElementById('interacted');
   var moreLinks = advertisersInteracted.querySelectorAll('[shade="medium"]');
-  if(moreLinks.length > 0){
+  if(moreLinks.length == 1){
     moreLinks[0].click();
     await sleep(2000);  // wait 2 seconds for new advertisers to finish loading
     loadMoreInteractedAdvertisers();
