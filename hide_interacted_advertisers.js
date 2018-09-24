@@ -25,7 +25,7 @@
     to a still-growing list by simply (regretfully) providing my email to my local tire repair shop.
     By sharing my data with their "approved partners," my list was quickly swollen with local car dealerships.
     And those dealerships shared my data with their "approved partners," even though
-    I never approved that sharing.  At some point, it looks like a company in Colorado (4 states away) 
+    I never approved that sharing.  At some point, it looks like a company in Colorado (4 states away)
     runs both a dealership and a real-estate company.  And now my list is choc-a-bloc with
     real-estate companies from across the US and Canada.
     I am not interested in a new or used car, nor do I plan on moving within the next decade.
@@ -75,9 +75,9 @@ async function hideInteractedAdvertisers(){
   var advertisersInteracted = document.getElementById('interacted');
   var buttons = advertisersInteracted.getElementsByTagName('button');
   var removedCounter = 0;
-  for (var i = 0; i < buttons.length; i++) { 
-    var content = buttons[i].getAttribute("data-tooltip-content"); 
-    if ( content == "Remove" ) { 
+  for (var i = 0; i < buttons.length; i++) {
+    var content = buttons[i].getAttribute("data-tooltip-content");
+    if ( content == "Remove" ) {
       buttons[i].click();
       removedCounter++;
       await sleep(200);  // wait .2 seconds to finish hiding current advertiser
