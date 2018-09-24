@@ -52,10 +52,11 @@ async function openInteractedAdvertisersSection(){
   var advertisersInteracted = document.getElementById('interacted');
   var advertisersExpandables = advertisersInteracted.querySelectorAll('[data-testid="ads_settings_expandable_profile"]');
   if(advertisersExpandables.length == 1){
-    // Assumes section is currently hidden
-    // Todo: check if section is already visible
-    advertisersExpandables[0].click();
-    await sleep(500);
+    section = advertisersExpandables[0];
+    if(section.children[2].className.split(' ').includes('hidden_elem')){
+      section.click();
+      await sleep(500);  // wait .5 seconds for section to appear
+    }
   }
 }
 
