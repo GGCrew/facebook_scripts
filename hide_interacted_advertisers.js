@@ -3,6 +3,8 @@
 
   Instructions:
     Go to https://www.facebook.com/ads/preferences/
+    Click "Advertisers you've interacted with"
+    Click "load more" as many times as you can (or are willing)
     Open your browser's Javascript console for that tab/window
     Copy all this code
     Paste this code into the Javascript console command line
@@ -38,7 +40,8 @@
       Mozilla Firefox 63
       Microsoft Edge 42
     Should also work on Chrome, Opera, and Chromium.
-    I have less faith it will work with Safari or IE.
+    I have less faith it will work with Safari.
+    Does NOT work with MS Internet Explorer 11 and earlier.
 */
 
 
