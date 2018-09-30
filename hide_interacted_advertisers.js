@@ -83,6 +83,9 @@ async function hideInteractedAdvertisers(){
   var removedCounter = 0;
   for(var i = 0; i < buttons.length; i++){
     var content = buttons[i].getAttribute("data-tooltip-content");
+    // This test is English-centric.  It will not work for other languages.
+    // (For example: this text is "Keelhaul" if "English (Pirate)" is selected.)
+    // Todo: make this test work for more languages
     if(content == "Remove"){
       buttons[i].scrollIntoView();
       buttons[i].click();
