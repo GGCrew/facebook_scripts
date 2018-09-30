@@ -10,7 +10,7 @@
     Sit back and watch
 
   What this script does:
-    Clicks the "Hide" button for each advertiser
+    Clicks the "Hide" button for each advertiser in the "Advertisers you've interacted with" section
 
   Why run this script:
     It's partially a "privacy thing."  It's primarily an "accuracy thing."
