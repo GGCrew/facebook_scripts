@@ -79,6 +79,7 @@ async function hideInteractedAdvertisers(){
   for(var i = 0; i < buttons.length; i++){
     var content = buttons[i].getAttribute("data-tooltip-content");
     if(content == "Remove"){
+      buttons[i].scrollIntoView();
       buttons[i].click();
       removedCounter++;
       await sleep(200);  // wait .2 seconds to finish hiding current advertiser
