@@ -4,6 +4,7 @@
   Instructions:
     Go to https://www.facebook.com/ads/preferences/
     Open your browser's Javascript console for that tab/window
+      (Try pressing F12, then click the "console" tab.)
     Copy all this code
     Paste this code into the Javascript console command line
     (optional: hit 'OK' if you see a "pasted Javascript can be dangerous" warning alert)
@@ -11,6 +12,10 @@
 
   What this script does:
     Clicks the "Hide" button for each advertiser in the "Advertisers you've interacted with" section
+
+  What this script doesn't do:
+    Hijack your Facebook account
+    Actually remove your email address from anyone who already has it
 
   Why run this script:
     It's partially a "privacy thing."  It's primarily an "accuracy thing."
@@ -25,7 +30,7 @@
     to a still-growing list by simply (regretfully) providing my email to my local tire repair shop.
     By sharing my data with their "approved partners," my list was quickly swollen with local car dealerships.
     And those dealerships shared my data with their "approved partners," even though
-    I never approved that sharing.  At some point, it looks like a company in Colorado (4 states away)
+    I never approved that sharing.  At some point, it looks like a company in Colorado (1500km away)
     runs both a dealership and a real-estate company.  And now my list is choc-a-bloc with
     real-estate companies from across the US and Canada.
     I am not interested in a new or used car, nor do I plan on moving within the next decade.
