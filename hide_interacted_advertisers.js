@@ -80,13 +80,17 @@ async function loadMoreInteractedAdvertisers(){
 async function hideInteractedAdvertisers(){
   var advertisersInteracted = document.getElementById('interacted');
   var buttons = advertisersInteracted.getElementsByTagName('button');
+  var removeTranslations = [
+    'Remove',   //English
+    'Keelhaul'  //English (Pirate)
+  ];
   var removedCounter = 0;
   for(var i = 0; i < buttons.length; i++){
-    var content = buttons[i].getAttribute("data-tooltip-content");
+    var content = buttons[i].getAttribute('data-tooltip-content');
     // This test is English-centric.  It will not work for other languages.
     // (For example: this text is "Keelhaul" if "English (Pirate)" is selected.)
     // Todo: make this test work for more languages
-    if(content == "Remove"){
+    if(removeTranslations.includes(content)){
       buttons[i].scrollIntoView();
       buttons[i].click();
       removedCounter++;
@@ -99,5 +103,5 @@ async function hideInteractedAdvertisers(){
 
 openInteractedAdvertisersSection();
 loadMoreInteractedAdvertisers();
-hideInteractedAdvertisers().then(val => alert("Script complete!\nHid " + val + " advertisers"));
+hideInteractedAdvertisers().then(val => alert('Script complete!\nHid ' + val + ' advertisers.'));
 
